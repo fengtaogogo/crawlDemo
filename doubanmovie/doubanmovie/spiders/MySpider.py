@@ -1,6 +1,6 @@
 import scrapy
 import sys
-sys.path.append('E:\python\exercise\doubanmovie\doubanmovie')
+sys.path.append('G:\python\doubanmovie\doubanmovie')
 from MovieItems import MovieItem
 
 
