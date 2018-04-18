@@ -1,0 +1,45 @@
+Metadata-Version: 2.0
+Name: 0-core-client
+Version: 1.1.0a8
+Summary: Zero-OS 0-core client
+Home-page: https://github.com/zero-os/0-core
+Author: Muhamad Azmy
+Author-email: muhamada@greenitglobe.com
+License: Apache 2.0
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: redis (>=2.10.5)
+
+# Zero-OS Python Client
+## Install
+
+```bash
+pip3 install 0-core-client
+```
+
+## How to use
+
+```python
+from zeroos.core0.client import Client
+
+cl = Client(host='<0-core-host-address>', password='<JWT>')
+
+#validate that core0 is reachable
+print(cl.ping())
+
+#then u can do stuff like
+print(
+    cl.system('ps -eF').get()
+)
+
+print(
+    cl.system('ip a').get()
+)
+
+#client exposes more tools for disk, bridges, and container mgmt
+print(
+    cl.disk.list()
+)
+```
+
+
